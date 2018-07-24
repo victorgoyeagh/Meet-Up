@@ -10,8 +10,4 @@ export class HomePage {
 
     constructor(public navCtrl: NavController) {
     }
-
-    NavigateToTestPage() {
-        this.navCtrl.push(TestPage);
-    }
 }
