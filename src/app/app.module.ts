@@ -7,7 +7,8 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { MenuModule } from './components/components.module';
 import { TestpagePageModule } from '../pages/testpage/testpage.module';
-
+import { RootReducer, appInitialState } from './store/global.store';
+import { NgRedux } from 'ng2-redux';
 
 @NgModule({
     declarations: [
@@ -31,4 +32,9 @@ import { TestpagePageModule } from '../pages/testpage/testpage.module';
         { provide: ErrorHandler, useClass: IonicErrorHandler }
     ]
 })
-export class AppModule { }
+export class AppModule {
+
+    constructor(private _store: NgRedux<any>) {
+        this._store.configureStore(RootReducer, appInitialState);
+    }
+}
