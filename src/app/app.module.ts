@@ -5,10 +5,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { MenuModule } from './components/components.module';
+import { MenuModule } from './modules/menu/menu.module';
 import { TestpagePageModule } from '../pages/testpage/testpage.module';
 import { RootReducer, appInitialState } from './store/global.store';
-import { NgRedux } from 'ng2-redux';
+import { NgRedux, NgReduxModule } from 'ng2-redux';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 @NgModule({
     declarations: [
@@ -16,6 +18,16 @@ import { NgRedux } from 'ng2-redux';
         HomePage
     ],
     imports: [
+        AngularFireModule.initializeApp({
+            apiKey: "AIzaSyBo11n2-ZiRtNvYoxqhJ6d3EotvlSK5VEM",
+            authDomain: "fir-app-d932a.firebaseapp.com",
+            databaseURL: "https://fir-app-d932a.firebaseio.com",
+            projectId: "fir-app-d932a",
+            storageBucket: "fir-app-d932a.appspot.com",
+            messagingSenderId: "176747700729"
+        }),
+        AngularFireDatabaseModule,
+        NgReduxModule,
         MenuModule,
         TestpagePageModule,
         BrowserModule,
@@ -35,6 +47,6 @@ import { NgRedux } from 'ng2-redux';
 export class AppModule {
 
     constructor(private _store: NgRedux<any>) {
-        this._store.configureStore(RootReducer, appInitialState);
+        this._store.configureStore(RootReducer, {});
     }
 }

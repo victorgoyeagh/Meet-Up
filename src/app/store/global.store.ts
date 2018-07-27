@@ -1,4 +1,3 @@
-import NgRedux from 'ng2-redux';
 import { combineReducers } from 'redux';
 import { globalActions } from './actions.store';
 
@@ -14,10 +13,9 @@ export const appInitialState = {
 export function globalReducer(state: any = globalReducerInitState, action) {
     switch (action.type) {
         case globalActions.getMainData:
-            let notesCol = state.Notes.concat(action.payload);
-            localStorage.setItem("notes", JSON.stringify(notesCol));
+            let data = state.Data.concat(action.payload);
             return {
-                Data: notesCol
+                Data: data
             }
         default:
             return state;
@@ -26,5 +24,5 @@ export function globalReducer(state: any = globalReducerInitState, action) {
 
 
 export const RootReducer = combineReducers({
-    user: globalReducer, 
+    global: globalReducer
 });

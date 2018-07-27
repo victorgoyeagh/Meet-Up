@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { MenuComponent } from './menu/component/menu';
+import { MenuComponent } from './component/menu';
 import { IonicModule } from 'ionic-angular';
 
 @NgModule({
