@@ -5,12 +5,16 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { MenuModule } from './modules/menu/menu.module';
 import { TestpagePageModule } from '../pages/testpage/testpage.module';
 import { RootReducer, appInitialState } from './store/global.store';
 import { NgRedux, NgReduxModule } from 'ng2-redux';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { SecurityModule } from './modules/security/security.module';
+import { LoginPageModule } from '../pages/login/login.module';
+import { HeaderModule } from './modules/header/header.module';
+
 
 @NgModule({
     declarations: [
@@ -26,9 +30,12 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
             storageBucket: "fir-app-d932a.appspot.com",
             messagingSenderId: "176747700729"
         }),
+        AngularFirestoreModule,
         AngularFireDatabaseModule,
         NgReduxModule,
-        MenuModule,
+        HeaderModule,
+        SecurityModule,
+        LoginPageModule,
         TestpagePageModule,
         BrowserModule,
         IonicModule.forRoot(MyApp)

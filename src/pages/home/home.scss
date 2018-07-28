@@ -1,3 +1,18 @@
 page-home {
+    .bg {
+        background-size: cover;
+        background-position: center;
+        
+        &.bg_1 {
+            background-image: url('/assets/imgs/default/1.jpg');
+        }
 
+        &.bg_2 {
+            background-image: url('/assets/imgs/default/2.jpg');
+        }
+
+        &.bg_3 {
+            background-image: url('/assets/imgs/default/3.jpg');
+        }
+    }
 }

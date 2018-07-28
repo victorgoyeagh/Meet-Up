@@ -14,3 +14,29 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+$brand-white: #ffffff;
+
+.title {
+    &.title-ios {
+        background: none;
+    }
+}
+
+.ion-page {
+    >ion-content {
+        position: relative;
+    }
+}
+
+.header-ios, 
+.footer-ios {
+    .toolbar-ios:last-child {
+        .toolbar-background-ios {
+            border-width: 0px;
+        }
+    }
+    .toolbar-background-ios {
+        border-width: 0px;
+    }
+}

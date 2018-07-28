@@ -1,13 +1,8 @@
-<ion-header>
+
     <ion-navbar>
-      <ion-title>
-        Main menu
-      </ion-title>
-      <ul>
-          <li>
-            <button (click)="NavigateToTestPage()" ion-button>Test Page</button></li>
-            <li *ngFor="let item of this.items | async">{{item}}</li>
-      </ul>
+        <ul>
+            <li *ngFor="let item of this.items | async">
+                <a (click)="NavigateToTestPage()" href="#" [title]="item.id">{{item.Name}}</a>
+            </li>
+        </ul>
     </ion-navbar>
-  </ion-header>
-  

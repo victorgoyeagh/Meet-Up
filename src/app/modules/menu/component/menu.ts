@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { TestPage } from '../../../../pages/testpage/testpage';
 import { AngularFireDatabase } from 'angularfire2/database';
 import * as Rx from 'rxjs';
+import { LoginPage } from '../../../../pages/login/login';
 
 @Component({
     selector: 'app-menu',
@@ -20,7 +20,7 @@ export class MenuComponent {
     }
 
     NavigateToTestPage() {
-        this.navCtrl.push(TestPage);
+        this.navCtrl.push(LoginPage);
     }
 
 }
