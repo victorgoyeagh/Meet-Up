@@ -1,22 +1,12 @@
 <app-header></app-header>
 
-<ion-header>
-    <ion-navbar>
-        <button ion-button menuToggle icon-only>
-            <ion-icon name='menu'></ion-icon>
-        </button>
-        <ion-title>
-        </ion-title>
-    </ion-navbar>
-</ion-header>
-
 <ion-menu [content]="content"> 
     <ion-content>
         <ion-list>
             <button ion-item (click)="openPage(HomePage)">
                 Home
             </button>
-            <button ion-item (click)="openPage(LoginPage)">
+            <button ion-item (click)="openPage('LoginPage')">
                 Friends
             </button>
             <button ion-item (click)="openPage(eventsPage)">

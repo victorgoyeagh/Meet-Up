@@ -1,5 +1,10 @@
 // http://ionicframework.com/docs/theming/
 
+@import "../assets/scss/normalise.scss";
+@import "../assets/scss/variables.scss";
+@import "../assets/scss/mixins.scss";
+@import "../assets/scss/global.scss";
+
 
 // App Global Sass
 // --------------------------------------------------
@@ -15,32 +20,3 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
-$brand-white: #ffffff;
-
-.toolbar-background {
-    background-color: transparent;
-}
-
-.title {
-    &.title-ios {
-        background: none;
-    }
-}
-
-.ion-page {
-    >ion-content {
-        position: relative;
-    }
-}
-
-.header-ios, 
-.footer-ios {
-    .toolbar-ios:last-child {
-        .toolbar-background-ios {
-            border-width: 0px;
-        }
-    }
-    .toolbar-background-ios {
-        border-width: 0px;
-    }
-}
