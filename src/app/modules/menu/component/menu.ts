@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
 import { AngularFireDatabase } from 'angularfire2/database';
 import * as Rx from 'rxjs';
 import { LoginPage } from '../../../../pages/login/login';
@@ -20,7 +19,6 @@ export class MenuComponent {
     }
 
     NavigateToTestPage() {
-        //this.navCtrl.push(LoginPage);
     }
 
 }
