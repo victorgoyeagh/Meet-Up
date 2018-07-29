@@ -14,6 +14,7 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { SecurityModule } from './modules/security/security.module';
 import { LoginPageModule } from '../pages/login/login.module';
 import { HeaderModule } from './modules/header/header.module';
+import { FooterModule } from './modules/footer/footer.module';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { HeaderModule } from './modules/header/header.module';
         AngularFireDatabaseModule,
         NgReduxModule,
         HeaderModule,
+        FooterModule,
         SecurityModule,
         LoginPageModule,
         TestpagePageModule,

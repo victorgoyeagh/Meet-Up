@@ -11,7 +11,7 @@ import { LoginPage } from '../../../../pages/login/login';
 export class MenuComponent {
     private items:Rx.Observable<any[]>= new Rx.Observable<any[]>();
 
-    constructor(public navCtrl: NavController, private db: AngularFireDatabase) {
+    constructor( private db: AngularFireDatabase) {
         this.items =  this.db.list<any>('/courses').valueChanges();
        /* let data = db.list('/courses').valueChanges().subscribe((value) => {
             this.items = value;
@@ -20,7 +20,7 @@ export class MenuComponent {
     }
 
     NavigateToTestPage() {
-        this.navCtrl.push(LoginPage);
+        //this.navCtrl.push(LoginPage);
     }
 
 }
