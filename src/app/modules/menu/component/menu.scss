@@ -2,4 +2,11 @@ ion-menu {
     .list-md {
         margin-top: $menu-margin;
     }
+    .copyright {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        font-size: 0.5em;
+    }
+    
 }

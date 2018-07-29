@@ -4,18 +4,21 @@
     <ion-content>
         <ion-list>
             <button ion-item (click)="openPage(HomePage)">
-                Home
+                <ion-icon ios="ios-home" md="md-home"></ion-icon> Home
             </button>
             <button ion-item (click)="openPage('LoginPage')">
-                Friends
+                <ion-icon ios="ios-person" md="md-person"></ion-icon> Login
             </button>
             <button ion-item (click)="openPage(eventsPage)">
-                Events
+                <ion-icon ios="ios-build" md="md-build"></ion-icon> Events
             </button>
             <button ion-item (click)="closeMenu()">
-                Close Menu
+                <ion-icon ios="ios-close" md="md-close"></ion-icon> Close Menu
             </button>
         </ion-list>
+        <div class="copyright">
+           &copy; copyright {{ displayYear }}. 
+        </div>
     </ion-content>
 </ion-menu>
 
