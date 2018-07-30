@@ -1,18 +1,11 @@
 ion-header {
     z-index: 9999;
 
-    .toolbar-title {
-        //background: $brand-white;
-        &.toolbar-title-ios {
-            //background: $brand-white;
-        }
-    }
-
-    &.header {
-        &.header-md {
-            &::after {
-                //background-image: $brand-white;
-            }
-        }
+    .logo {
+        width: 105px;
+        background-repeat: no-repeat;
+        height: 22px;
+        background-image: url('/assets/imgs/logos/logo.png');
+        background-size: 100%;
     }
 }

@@ -1,23 +1,31 @@
 <app-header></app-header>
 
-<ion-menu [content]="content"> 
+<ion-menu id="ionMenu" #ionMenu [content]="content" enableBackdropDismiss="false">
     <ion-content>
         <ion-list>
-            <button ion-item (click)="openPage(HomePage)">
-                <ion-icon ios="ios-home" md="md-home"></ion-icon> Home
-            </button>
-            <button ion-item (click)="openPage('LoginPage')">
-                <ion-icon ios="ios-person" md="md-person"></ion-icon> Login
-            </button>
-            <button ion-item (click)="openPage(eventsPage)">
-                <ion-icon ios="ios-build" md="md-build"></ion-icon> Events
-            </button>
-            <button ion-item (click)="closeMenu()">
-                <ion-icon ios="ios-close" md="md-close"></ion-icon> Close Menu
-            </button>
+            <ion-item>
+                <a menuClose (click)="openPage(homePage)">
+                    <ion-icon ios="ios-home" md="md-home"></ion-icon> Home
+                </a>
+            </ion-item>
+            <ion-item>
+                <a menuClose (click)="openPage(loginPage)">
+                    <ion-icon ios="ios-person" md="md-person"></ion-icon> Login
+                </a>
+            </ion-item>
+            <ion-item>
+                <a menuClose (click)="openPage(loginPage)">
+                    <ion-icon ios="ios-settings" md="md-settings"></ion-icon> Settings
+                </a>
+            </ion-item>
+            <ion-item>
+                <a menuClose>
+                    <ion-icon ios="ios-close" md="md-close"></ion-icon> Close Menu
+                </a>
+            </ion-item>
         </ion-list>
         <div class="copyright">
-           &copy; copyright {{ displayYear }}. 
+            &copy; copyright {{ displayYear }}.
         </div>
     </ion-content>
 </ion-menu>

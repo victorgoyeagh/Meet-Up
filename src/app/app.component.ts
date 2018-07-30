@@ -1,38 +1,59 @@
-import { Component } from '@angular/core';
-import { Platform, MenuController, IonicPage } from 'ionic-angular';
+import { Component, ViewChild, OnInit } from '@angular/core';
+import { Platform, MenuController, IonicModule, Menu } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import * as Rx from 'rxjs';
+import { map } from 'rxjs/operators';
 
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
+import { CommunicationService } from './providers/communication.service';
+
 
 @Component({
 	templateUrl: 'app.html'
 })
-export class MyApp {
+export class MyApp implements OnInit {
+	public rootPage: any;
+	public homePage: any;
+	public loginPage: any;
     public displayYear: number;
-	rootPage: any = HomePage;
+    @ViewChild('ionMenu') ionMenu: Menu;
 
-    constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, private menu: MenuController) {
+    constructor(
+        platform: Platform, 
+        statusBar: StatusBar, 
+        splashScreen: SplashScreen, 
+        private communicationService: CommunicationService
+    ) {
+        this.homePage = HomePage;
+        this.loginPage = LoginPage;
+        this.rootPage = this.homePage;
+
 		platform.ready().then(() => {
-			// Okay, so the platform is ready and our plugins are available.
-			// Here you can do any higher level native things you might need.
 			statusBar.styleDefault();
 			splashScreen.hide();
         });
-        this.menu.enable(true);
 
         let date = new Date();
         this.displayYear = date.getFullYear();
     }
-    
-    openPage(pageToOpen){
-        this.rootPage = LoginPage;
-        this.closeMenu();
+
+    ngOnInit(){
+        this.ionMenu.enable(true);
+        this.ionMenu.swipeEnable(false);
+
+        this.ionMenu.ionClose.subscribe((value) => {
+            this.communicationService.updateMenuIsClosed(value);
+        })
+    }
+
+    openPage(e){
+        this.rootPage = e;
     }
 
     closeMenu(){
-        this.menu.close();
+        this.ionMenu.close();
     }
 }
 

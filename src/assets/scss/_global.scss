@@ -1,18 +1,10 @@
-.swiper-pagination-fraction, 
-.swiper-pagination-custom, 
-.swiper-container-horizontal > .swiper-pagination-bullets
-{
-    bottom: 100px;
+
+a {
+    color: $brand-turquoise;
 }
 
-.toolbar-background {
-    background-color: transparent;
-}
-
-.title {
-    &.title-ios {
-        background: none;
-    }
+ion-label {
+    font-size: 0.5em;
 }
 
 ion-footer,
@@ -29,23 +21,6 @@ ion-header {
     }
 }
 
-.ion-page {
-    >ion-content {
-        position: relative;
-    }
-}
-
-ion-label {
-    font-size: 0.6em;
-}
-
-.ios .menu-content-open {
-    @include box-shadow(0,0,0,$brand-white);
-    border: 1px solid black;
-    border-top-width: 0px;
-    border-bottom-width: 0px;
-}
-
 .header-ios, 
 .footer-ios {
     .toolbar-ios:last-child {
@@ -56,4 +31,28 @@ ion-label {
     .toolbar-background-ios {
         border-width: 0px;
     }
+}
+
+.ion-page {
+    >ion-content {
+        position: relative;
+    }
+}
+
+.swiper-pagination-fraction, 
+.swiper-pagination-custom, 
+.swiper-container-horizontal > .swiper-pagination-bullets
+{
+    bottom: 100px;
+}
+
+.toolbar-background {
+    background-color: transparent;
+}
+
+.ios .menu-content-open {
+    @include box-shadow(0,0,0,$brand-white);
+    border: 1px solid black;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
 }

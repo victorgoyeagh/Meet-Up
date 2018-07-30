@@ -2,6 +2,37 @@ ion-menu {
     .list-md {
         margin-top: $menu-margin;
     }
+    .content-md {
+        background-color: $color-menu;
+        color: grey;
+
+        .list-md {
+            padding: 0px 16px;
+            .item-md {
+                min-height: 2em;
+                background-color: transparent;
+                color: grey;
+                padding: 0px;
+
+                .item-block .item-inner {
+                    border-bottom: 1px solid #404040;
+                }
+
+                .item-inner {
+                    border-bottom: 1px dashed #565656;
+                    padding: 0px;
+
+                    .label-md {
+                        margin: 0px;
+
+                        ion-icon {
+                            margin-right: 6px;
+                        }
+                    }
+                }
+            }
+        }
+    }
     .copyright {
         position: absolute;
         bottom: 20px;

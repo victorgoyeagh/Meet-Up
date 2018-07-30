@@ -15,12 +15,15 @@ import { SecurityModule } from './modules/security/security.module';
 import { LoginPageModule } from '../pages/login/login.module';
 import { HeaderModule } from './modules/header/header.module';
 import { FooterModule } from './modules/footer/footer.module';
+import { AnimationService, AnimatesDirective } from 'css-animator';
+import { CommunicationService } from './providers/communication.service';
 
 
 @NgModule({
     declarations: [
         MyApp,
-        HomePage
+        HomePage,
+        AnimatesDirective
     ],
     imports: [
         AngularFireModule.initializeApp({
@@ -50,7 +53,9 @@ import { FooterModule } from './modules/footer/footer.module';
     providers: [
         StatusBar,
         SplashScreen,
-        { provide: ErrorHandler, useClass: IonicErrorHandler }
+        { provide: ErrorHandler, useClass: IonicErrorHandler },
+        AnimationService,
+        CommunicationService
     ]
 })
 export class AppModule {

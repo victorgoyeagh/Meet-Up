@@ -1,22 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { SwapClassDirective } from '../../directive/swap-class.directive';
+import { MyApp } from '../../../../app.component';
 
-/**
- * Generated class for the HeaderComponent component.
- *
- * See https://angular.io/api/core/Component for more info on Angular
- * Components.
- */
+
+
 @Component({
-  selector: 'app-header',
-  templateUrl: 'header.html'
+    selector: 'app-header',
+    templateUrl: 'header.html'
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
+    private app = MyApp;
 
-  text: string;
+    text: string;
 
-  constructor() {
-    console.log('Hello HeaderComponent Component');
-    this.text = 'Hello World';
-  }
+    constructor() {
+    }
 
+    ngOnInit() {
+    }
 }
