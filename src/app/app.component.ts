@@ -40,12 +40,12 @@ export class MyApp implements OnInit {
     }
 
     ngOnInit(){
-        this.ionMenu.enable(true);
-        this.ionMenu.swipeEnable(false);
+        //this.ionMenu.enable(true);
+        //this.ionMenu.swipeEnable(false);
 
-        this.ionMenu.ionClose.subscribe((value) => {
-            this.communicationService.updateMenuIsClosed(value);
-        })
+        //this.ionMenu.ionClose.subscribe((value) => {
+        //    this.communicationService.updateMenuIsClosed(value);
+        //})
     }
 
     openPage(e){

@@ -1,20 +1,45 @@
 <app-header></app-header>
 
+<ion-header>
+    <ion-navbar>
+        <a [class]="'navicon-button x'" swapClass menuToggle>
+            <div class="navicon"></div>
+        </a>
+        <div class="logo"></div>
+        <ion-title></ion-title>
+    </ion-navbar>
+</ion-header>
+
 <ion-content>
+
+    <ion-grid class="overlay">
+        <ion-row>
+            <ion-badge item-end>Welcome to Incentive</ion-badge>
+        </ion-row>
+        <ion-row>
+            <ion-col col-8>This column will take 6 columns <ion-icon ios="ios-arrow-forward" md="md-arrow-forward"></ion-icon></ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-buttons>
+                <button class="btn login" name="login">Register</button>
+            </ion-buttons>
+        </ion-row>
+    </ion-grid>
+
     <ion-slides pager>
 
         <ion-slide class="bg bg_2">
             <h2></h2>
         </ion-slide>
-        
+
         <ion-slide class="bg bg_3">
             <h2></h2>
         </ion-slide>
-        
+
         <ion-slide class="bg bg_1">
             <h2></h2>
         </ion-slide>
-    
+
     </ion-slides>
 
 </ion-content>

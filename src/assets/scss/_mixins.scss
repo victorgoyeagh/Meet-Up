@@ -86,11 +86,11 @@
     overflow: hidden;
   }
   @mixin box-shadow($val1, $val2, $val3, $color) {
-    -moz-box-shadow: $val1 $val2 $val3 $color;
-    -webkit-box-shadow: $val1 $val2 $val3 $color;
-    box-shadow: $val1 $val2 $val3 $color;
-    -ms-filter:  "progid:DXImageTransform.Microsoft.Shadow(Strength=$val1, Direction=135, Color='$color')";
-    filter:  "progid: DXImageTransform.Microsoft.Shadow(Strength=$val1, Direction=135, Color='$color')";
+    -moz-box-shadow: $val1 $val2 $val3 $color !important;
+    -webkit-box-shadow: $val1 $val2 $val3 $color !important;
+    box-shadow: $val1 $val2 $val3 $color !important;
+    -ms-filter:  "progid:DXImageTransform.Microsoft.Shadow(Strength=$val1, Direction=135, Color='$color')" !important;
+    filter:  "progid: DXImageTransform.Microsoft.Shadow(Strength=$val1, Direction=135, Color='$color')" !important;
   }
   @mixin responsive-image {
     width: 100% !important;

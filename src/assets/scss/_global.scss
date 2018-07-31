@@ -3,12 +3,30 @@ a {
     color: $brand-turquoise;
 }
 
-ion-label {
-    font-size: 0.5em;
+body {
+    background-color: $brand-turquoise;
+    ion-app {
+        background-color: $brand-turquoise;
+        .app-root {
+            background-color: $brand-turquoise;
+        }
+    }
+}
+
+button {
+    color: white;
+    background: transparent;
+    border: 2px solid #40e0d0;
+    border-radius: 20px;
+    font-size: 0.6em;
+    padding: 8px 28px;
 }
 
 ion-footer,
 ion-header {
+    &.header-ios {
+        padding-top: 5px;
+    }
     z-index: 9999;
     @include box-shadow(0,0,0,$brand-white);
     
@@ -21,8 +39,12 @@ ion-header {
     }
 }
 
-.header-ios, 
-.footer-ios {
+ion-label {
+    font-size: 0.5em;
+}
+
+.header, 
+.footer {
     .toolbar-ios:last-child {
         .toolbar-background-ios {
             border-width: 0px;
@@ -33,15 +55,13 @@ ion-header {
     }
 }
 
-.ion-page {
+ion-page {
     >ion-content {
         position: relative;
     }
 }
 
-.swiper-pagination-fraction, 
-.swiper-pagination-custom, 
-.swiper-container-horizontal > .swiper-pagination-bullets
+.swiper-pagination
 {
     bottom: 100px;
 }
@@ -50,7 +70,7 @@ ion-header {
     background-color: transparent;
 }
 
-.ios .menu-content-open {
+.menu-content-open {
     @include box-shadow(0,0,0,$brand-white);
     border: 1px solid black;
     border-top-width: 0px;

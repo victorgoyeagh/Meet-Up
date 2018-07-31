@@ -1,4 +1,4 @@
-page-home {
+.ion-page {
     .bg {
         filter: brightness(0.5);
         // filter: grayscale(0.6) blur(0px);
@@ -20,7 +20,8 @@ page-home {
 
         &.bg_2 {
             background-image: url('/assets/imgs/default/2.jpg');
-            background-position: 60% 0px;
+            background-position: 60% -140px; //background-position: 60% 0px;
+            background-size: 460%;
         }
 
         &.bg_3 {
@@ -30,10 +31,41 @@ page-home {
     }
 
     .swiper-pagination {
+        bottom: 140px;
         .swiper-pagination-bullet {
             width: 18px;
             height: 18px;
             background-color: $brand-turquoise;
         }
+    }
+}
+
+.grid {    
+    z-index: 99999;
+    background-color: transparent;
+    position: absolute;
+    top: 40%;
+    padding: 0 20px;
+    color: white;
+
+    .badge {
+        border-radius: 0px;
+        color: #fff;
+        background-color: transparent;
+        font-size: 0.4em;
+        padding: 4px;
+        margin-bottom: 5px;
+        // border-bottom: 1px solid white;
+    }
+
+    button {
+        margin-top: 10px;
+    }
+}
+
+ion-content {
+    .fixed-content,
+    .scroll-content {
+        margin-top: 0px !important;
     }
 }
