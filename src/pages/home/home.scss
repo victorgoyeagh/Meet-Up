@@ -1,3 +1,4 @@
+
 .ion-page {
     .bg {
         filter: brightness(0.5);
@@ -28,10 +29,24 @@
             background-image: url('/assets/imgs/default/3.jpg');
             background-position: 61% 0px;
         }
+
+        &.bg_4 {
+            background-image: url('/assets/imgs/default/4.jpg');
+        }
+
+        &.bg_5 {
+            background-image: url('/assets/imgs/default/5.jpg');
+        }
+
+        &.bg_6 {
+            background-image: url('/assets/imgs/default/6.jpg');
+            // background-position: initial;
+            background-position: 70%;
+        }
     }
 
     .swiper-pagination {
-        bottom: 140px;
+        bottom: 10%;
         .swiper-pagination-bullet {
             width: 18px;
             height: 18px;
@@ -44,22 +59,18 @@
     z-index: 99999;
     background-color: transparent;
     position: absolute;
-    top: 40%;
-    padding: 0 20px;
+    top: 30%;
+    padding: 0 5%;
     color: white;
 
-    .badge {
-        border-radius: 0px;
-        color: #fff;
-        background-color: transparent;
-        font-size: 0.4em;
-        padding: 4px;
-        margin-bottom: 5px;
-        // border-bottom: 1px solid white;
+    .grid-inner {
+        padding: 20px;
+        background: rgba(255,255,255,0.2);
+        border-radius: 20px;
     }
 
     button {
-        margin-top: 10px;
+        margin-top: 20px;
     }
 }
 

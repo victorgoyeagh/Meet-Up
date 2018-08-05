@@ -5,6 +5,7 @@ $toggled-size : .75;
 $bg : #274380;
 $nav-bg  : #000;
 $content-bg :  $brand-turquoise;
+$burger-width: 1.2em;
 
 .navicon-button {
   display: inline-block;
@@ -17,14 +18,14 @@ $content-bg :  $brand-turquoise;
 
   .navicon:before, 
   .navicon:after {
-    width: 1.5em;
+    width: $burger-width;
     transition: $duration/2;
   }
 }
 
 .navicon {
   position: relative;
-  width: 1.5em;
+  width: $burger-width;
   height: 0.2125rem;
   background: $content-bg;
   transition: $duration;
@@ -34,7 +35,7 @@ $content-bg :  $brand-turquoise;
     display: block;
     content: "";
     height: 0.2125rem;
-    width: 2.5rem;
+    width: $burger-width;
     background: $content-bg;
     position: absolute;
     z-index: -1;

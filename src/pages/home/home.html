@@ -10,36 +10,63 @@
     </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="bg bg_6">
+</ion-content>
 
-    <ion-grid class="overlay">
-        <ion-row>
-            <ion-badge item-end>Welcome to Incentive</ion-badge>
-        </ion-row>
-        <ion-row>
-            <ion-col col-8>This column will take 6 columns <ion-icon ios="ios-arrow-forward" md="md-arrow-forward"></ion-icon></ion-col>
-        </ion-row>
-        <ion-row>
-            <ion-buttons>
-                <button class="btn login" name="login">Register</button>
-            </ion-buttons>
-        </ion-row>
-    </ion-grid>
-
+<ion-content class="transparent">
     <ion-slides pager>
+
+        <ion-slide>
+            <ion-grid class="overlay">
+                <div class="grid-inner">
+                <ion-row>
+                    <ion-spinner name="lines"></ion-spinner>
+                </ion-row>
+                <ion-row>
+                    <ion-badge item-end>Welcome to Incentive</ion-badge>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+
+                        <h1>
+                            <ion-icon ios="ios-contact" md="md-contact"></ion-icon>
+                            <br/>
+                        </h1>
+                    </ion-col>
+                </ion-row>
+                <form [formGroup]="loginForm">
+                    <ion-row>
+                        <ion-input autofocus formControlName="username" required type="text" placeholder="Username"></ion-input>
+                    </ion-row>
+                    <ion-row>
+                        <ion-input formControlName="password" required type="password" placeholder="Password"></ion-input>
+                    </ion-row>
+                    <ion-row>
+                        <ion-buttons>
+                            <button class="register full-width" name="login">Log in</button>
+                        </ion-buttons>
+                    </ion-row>
+
+                    <ion-row>
+                        <a href="#" class="register">Register</a>
+                    </ion-row>
+                    <!--
+                <ion-row>
+                <ion-buttons>
+                    <button class="login full-width" name="login">Register</button>
+                </ion-buttons>
+            </ion-row>
+        -->
+                </form>
+                </div>
+            </ion-grid>
+
+        </ion-slide>
 
         <ion-slide class="bg bg_2">
             <h2></h2>
         </ion-slide>
 
-        <ion-slide class="bg bg_3">
-            <h2></h2>
-        </ion-slide>
-
-        <ion-slide class="bg bg_1">
-            <h2></h2>
-        </ion-slide>
-
-    </ion-slides>
+    </ion-slides>-->
 
 </ion-content>

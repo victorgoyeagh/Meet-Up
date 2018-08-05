@@ -4,6 +4,7 @@ import { SecurityModule } from '../../app/modules/security/security.module';
 import { HeaderModule } from '../../app/modules/header/header.module';
 import { FooterModule } from '../../app/modules/footer/footer.module';
 import { HomePage } from './home';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -12,6 +13,8 @@ import { HomePage } from './home';
     HomePage,
   ],
   imports: [
+    FormsModule, 
+    ReactiveFormsModule,
     FooterModule,
     HeaderModule,
     SecurityModule,
