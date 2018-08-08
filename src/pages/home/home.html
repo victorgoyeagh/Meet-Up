@@ -10,54 +10,45 @@
     </ion-navbar>
 </ion-header>
 
-<ion-content class="bg bg_6">
+<ion-content class="bg bg_2">
 </ion-content>
 
 <ion-content class="transparent">
-    <ion-slides pager>
+    <ion-slides pager effect="fade">
 
         <ion-slide>
             <ion-grid class="overlay">
                 <div class="grid-inner">
-                <ion-row>
-                    <ion-spinner name="lines"></ion-spinner>
-                </ion-row>
-                <ion-row>
-                    <ion-badge item-end>Welcome to Incentive</ion-badge>
-                </ion-row>
-                <ion-row>
-                    <ion-col>
+                    <ion-row>
+                        <ion-spinner></ion-spinner>
+                    </ion-row>
+                    <ion-row>
+                        <ion-badge item-end>Welcome to Incentive</ion-badge>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col>
+                            <h1>
+                                <ion-icon ios="ios-contact" md="md-contact"></ion-icon> Sign in
+                            </h1>
+                        </ion-col>
+                    </ion-row>
+                    <form [formGroup]="loginForm">
+                        <ion-row>
+                            <ion-input autofocus formControlName="username" required type="text" placeholder="Username"></ion-input>
+                        </ion-row>
+                        <ion-row>
+                            <ion-input formControlName="password" required type="password" placeholder="Password"></ion-input>
+                        </ion-row>
+                        <ion-row>
+                            <ion-buttons>
+                                <button class="register full-width" name="login">Log in</button>
+                            </ion-buttons>
+                        </ion-row>
 
-                        <h1>
-                            <ion-icon ios="ios-contact" md="md-contact"></ion-icon>
-                            <br/>
-                        </h1>
-                    </ion-col>
-                </ion-row>
-                <form [formGroup]="loginForm">
-                    <ion-row>
-                        <ion-input autofocus formControlName="username" required type="text" placeholder="Username"></ion-input>
-                    </ion-row>
-                    <ion-row>
-                        <ion-input formControlName="password" required type="password" placeholder="Password"></ion-input>
-                    </ion-row>
-                    <ion-row>
-                        <ion-buttons>
-                            <button class="register full-width" name="login">Log in</button>
-                        </ion-buttons>
-                    </ion-row>
-
-                    <ion-row>
-                        <a href="#" class="register">Register</a>
-                    </ion-row>
-                    <!--
-                <ion-row>
-                <ion-buttons>
-                    <button class="login full-width" name="login">Register</button>
-                </ion-buttons>
-            </ion-row>
-        -->
-                </form>
+                        <ion-row>
+                            <a href="#" class="register">Register</a>
+                        </ion-row>
+                    </form>
                 </div>
             </ion-grid>
 

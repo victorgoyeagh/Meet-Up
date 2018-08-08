@@ -1,7 +1,7 @@
 
 .ion-page {
     .bg {
-        filter: brightness(0.5);
+        filter: brightness(0.4);
         // filter: grayscale(0.6) blur(0px);
         background-size: cover;
         background-position: center;
@@ -65,7 +65,7 @@
 
     .grid-inner {
         padding: 20px;
-        background: rgba(255,255,255,0.2);
+        // background: rgba(255,255,255,0.2);
         border-radius: 20px;
     }
 
